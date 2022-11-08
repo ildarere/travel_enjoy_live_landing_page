@@ -440,6 +440,7 @@ body {
 .wrapper {
     max-width: 1180px;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -620,25 +621,40 @@ body {
 
 .services-list{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-grow: 1;
     flex-direction: row;
 }
 .service-item {
+    width: 267px;
+    height: 314px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
     justify-content: center;
-    width: 267px;
-    height: 314px;
+    flex-wrap: nowrap;
     position: relative;
-    
+    background-color: transparent;
     border-radius: 36px;
+
 }
 .service-item:hover {
+    background-color: white;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+}
+.service-item:hover.service-item::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #DF6951;
+    border-radius: 30px 0px 10px;
+    position: absolute;
+    bottom: -33px;
+    left: -35px;
+    z-index: -1;
 }
 .service-icon {
     padding-bottom: 29px;
@@ -673,27 +689,507 @@ body {
 .decoration-plus {
     position: absolute;
     top: 0;
-    right: 270px;
+    right: 0;
 }
 /* Category section styles end*/
 /* Category Destinations styles start*/
+.destination-section{
+    margin-bottom: 186px;
+    position: relative;
+}
 .destination-list{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .destination-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 315px;
     height: 457px;
+    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+    border-radius: 24px;
+}
+.bottompart {
+
+    width: 315px;
+    height: 130px;
     border-radius: 0px 0px 24px 24px;
-border-radius: 24px;
+    background-color: white;
+    padding: 0 20px;
 }
-.Rome {
-    background: url('../img/Rome.png') no-repeat 0;
-    background-size:cover;
+.bottompart div:first-child {
+    display: flex;
+    margin-top: 27px;
+    margin-bottom: 19px;
+    justify-content: space-between;
+
 }
+.bottompart div:last-child{
+    display: flex;
+
+}
+.bottompart div:last-child img{
+    width: 16px;
+    height: 16px;
+    display: inline;
+    margin-right: 16px;
+}
+.bottompart .country {
+    font-size: 18px;
+    line-height: 124.5%;
+    color: #5E6282;
+}
+.bottompart .price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 124.5%;
+    color: #5E6282;
+
+}
+.bottompart .time {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 124.5%;
+    color: #5E6282;
+}
+.rome {
+    background: url('../img/Rome.png') no-repeat ;
+}
+.UK {
+    background: url('../img/UK.png') no-repeat ;
+}
+.Europe {
+    background: url('../img/Europe.png') no-repeat ;
+}
+.decore-dest {
+    position: absolute;
+    top: 320px;
+    right: -20px;
+}
+
 /* Category Destinations styles end*/
+/* Category book-section styles start*/
+.book-section {
+    margin-bottom: 200px;
+}
+.book-section-sides {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.header-left {
+    max-width: 511px;
+    text-align: left;
+}
+.type-left {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.left-side-book-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.book-item-list li::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 47px;
+    height: 48px;
+    left: -68px;
+    border-radius: 13px;
+  
+    
+}
+.book-item-list li {
+    position: relative;
+    margin-bottom: 48px;
+}
+.book-item-list li:last-child {
+    margin-bottom: 0px;
+}
+.book-item-list .mg {
+    margin-left: 68px;
+}
+.bg-yellow::before {
+    background-color: #F0BB1F ;
+    background-image: url('../img/destination-icon.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg-red::before {
+    background: #F15A2B;
+    background-image: url('../img/water-sport-icon.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg-blue::before {
+    background: #006380;
+    background-image: url('../img/taxi-icon.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.book-item .header {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 124.5%;
+    color: #5E6282;
+    padding-bottom: 4px;
+}
+.book-item .discryption {
+    max-width: 327px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 124.5%;
+    color: #5E6282;
+}
+.right-side-book-section {
+    position: relative;
+    width: 50%;
+    height: 500px;
+}
+.step-section-img {
+    position: absolute;
+    
+
+}
+
+
+/* Category book-section styles end*/
+/* Category testimonials-section styles start*/
+.testimonials-section {
+    margin-bottom: 196px;
+}
+.left-side-testimonials-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.dots-icon {
+    width: 87px;
+    height: 12px;
+  
+}
+.testimonials-section-sides {
+    display: flex;
+}
+.review {
+    width: 504px;
+    height: 245px;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 34px;
+    position: absolute;
+    z-index: 100;
+}
+.right-side-testimonials-section .text {
+    max-width: 402px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #5E6282;
+    margin-bottom: 34px;
+}
+.right-side-testimonials-section .name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #5E6282;
+}
+.right-side-testimonials-section .location {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #5E6282;
+    background-color: white;
+}
+.right-side-testimonials-section .profile-img {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    top: -34px;
+    left: -34px;
+}
+.right-side-testimonials-section { 
+    position: relative;
+    display: flex;
+}
+.behind{
+   
+    position: absolute;
+    top: 90px;
+    left: 50px;
+    border: 2px solid #F7F7F7;
+    z-index: 1;
+    filter: 0;
+    box-shadow: none;
+}
+.review2 {
+    width: 504px;
+    height: 245px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 34px;
+    position: absolute;
+ 
+    
+    
+    
+}
+.review2 .text {
+    color: transparent; 
+}
+.right-side-testimonials-section .controls {
+    width: 14px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    
+    top: 100px;
+    right: -620px;
+}
+.right-side-testimonials-section .controls img {
+    cursor: pointer;
+}
+
+/* Category testimonials-section styles end*/
+/* Category logos-section styles start*/
+.logos-section {
+    margin-bottom: 111px;
+}
+.logo-container{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+}
+.logo-item {
+    width: 221px;
+    height: 86px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+.logo-item:hover{
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+    
+}
+.logo-item:hover .logo {
+    mix-blend-mode:normal;
+}
+.logo {
+    position: absolute;
+    mix-blend-mode: luminosity;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Category logos-section styles end*/
+/* Category subscribe-section styles start*/
+.subscribe-section {
+    margin-bottom: 166px;
+
+}
+.subscribe-container {
+    width: 1170px;
+    height: 407px;
+   
+    background: rgba(223, 215, 249, .2);
+    border-radius:  129px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+.title-subscribe {
+    max-width: 859px;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 54px;
+    color: #5E6282;
+    text-align: center;
+    margin-bottom: 74px;
+}
+.input-email-field {
+    width: 421px;
+    height: 68px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 24px;
+    position: relative;
+    padding-left: 66px;
+}
+.input-email-field img {
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    top: 25px;
+    left: 31px;
+    
+  
+}
+.input-email {
+    width: 100%;
+    height: 100%;
+    padding:  25px 0;
+    border: 0;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #39425D;
+    
+}
+.sub-button {
+    padding: 22px 50px;
+    height: 68px;
+    background: linear-gradient(#FF946D 0, #FF7D68 100%) ;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+}
+.plane-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: translateX(50%) translateY(-50%);
+}
+.decore {
+    position: absolute;
+    bottom: -70px;
+    right: -90px;
+}
+.decore-1 {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    opacity: 0.1;
+}
+.decore-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    opacity: 0.1;
+}
+/* Category subscribe-section styles end*/
+/* Category footer-section styles start*/
+.footer {
+    margin-bottom: 79px;
+}
+.footer-container {
+    max-width: 1060px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 84px;
+}
+.company-desc-colunm {
+    display: flex;
+    flex-direction: column;
+    width: 207px;
+}
+.company-desc-colunm .logo-footer {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 66px;
+    color: #181E4B;
+    margin-bottom: 19px;
+}
+.company-desc-colunm .desrypt {
+    max-width:  207px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 124.5%;
+    color: #5E6282;
+}
+.nav-column {
+    display: flex;
+    flex: 1 1 474px;
+    justify-content: space-around;
+    margin-top: 23px;
+}
+
+
+.nav-column ul>li {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 124.5%;
+    color: #5E6282;
+    margin-bottom: 12px;
+    
+}
+.nav-column ul {
+    display: flex;
+    flex-direction: column;
+}
+.nav-column ul>lh {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 124.5%;
+    color: #080809;
+    margin-bottom: 34px;
+}
+.icon-back {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-right: 25px;
+}
+.icon-back .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.rainbow-back {
+    background: conic-gradient(from 180deg at 50% 50%, #B8D2F1 0deg, #F289AA 60deg, #C68BF0 106.09deg, #D164DA 153.75deg, #C963E8 221.25deg, #BFC2E8 258.75deg, #FFC999 288.75deg, #D0D8C9 315deg, #BAD0F1 334.13deg, #CED8CB 358.97deg, rgba(255, 255, 255, 0) 360deg);
+}
+.social {
+    margin-top: 22px;
+    margin-bottom: 26px;
+    
+}
+.outbound-column .social {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 214px;
+}
+.discover p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 124.5%;
+    letter-spacing: 0.005em;
+    color: #5E6282;
+    margin-bottom: 15px;
+}
+.outbound-column {
+    width: 215px;
+}
+.copyrights {
+    text-align: center;
+}
+/* Category footer-section styles end*/
