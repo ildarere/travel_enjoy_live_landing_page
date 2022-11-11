@@ -492,20 +492,27 @@ body {
     border-radius: 5px;
     padding: 9px 22px;
 }
-.arr-down {
-    width: 9px;
-    height: 4.5px;
-    margin-left: 6.5px;
-    display: inline;
+.lang-arrow {
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #000000 !important;
+    border-right: 1px solid #000000 !important;
+    transform: rotate(135deg);
+    display: block;
+    cursor: pointer;
 
 }
 .language-select {
     cursor: pointer;
     padding: 9px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .lang {
-    display: inline;
+
     padding-left: 25px;
+    margin-right: 6.5px;
 }
 /*  Header styles end  */
 
