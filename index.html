@@ -18,6 +18,8 @@
                 </a>
             </div>
             <nav class="header-nav">
+                <input type="checkbox" id="menubtn" class="menu-button ">
+                <label for="menubtn" class="menu-button-label header-nav__menu-button"></label>
                 <ul class="header-list">
                     <li class="header-item">
                         <a href="#" class="header-link">Desitnations</a></li>
@@ -28,7 +30,7 @@
                     <li class="header-item">
                         <a href="#" class="header-link">Bookings</a></li>
                     <li class="header-item">
-                        <a href="#" class="header-link">Login</a></l    i>
+                        <a href="#" class="header-link">Login</a></li>
                     <li class="header-item sign-up-li">
                         <a href="#" class="header-link sign-up">Sign up</a></li>
                     <li class="header-item language-select">
@@ -37,6 +39,8 @@
                         <div class="lang-arrow"></div>
                     </li>
                 </ul>
+               
+
             </nav>
         </div>
     </div>
@@ -48,15 +52,18 @@
                 <section class="intro">
                     <div class="left-side-intro">
                         <h2 class="intro-tag">Best Destinations around the world</h2>
-                        <img class="Decore-main-tagline" src="./img/Decore-main-tagline.png" alt="Decore-main-tagline">
-                        <h1 class="main-tagline">Travel, enjoy and live a new and full life</h1>
+                        
+                        <h1 class="main-tagline">Travel, <span class="decore-main-tagline"><img class="decore-main-tagline-img" src="./img/Decore-main-tagline.png" alt="Decore-main-tagline">enjoy</span> and live a new and full life</h1>
                         <p class="under-main-tagline">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
                         <div class="intro-buttons">
                             <button class="intro-more-btn">Find out more</button>
-                            <div class="play-btn">
-                                <div class="circle"><div class="triangle"></div></div>
+                            <div class="play-demo-block">
+                                <div class="play-btn">
+                                    <div class="circle"><div class="triangle"></div></div>
+                                </div>
+                                <p class="intro-play-demo-text"><a href="#">Play Demo</a></p>
                             </div>
-                            <p class="intro-play-demo-text"><a href="#">Play Demo</a></p>
+                           
                         </div>  
                     </div>
                     <div class="right-side-intro">
@@ -120,7 +127,7 @@
                         </div>
                     </a>
                     <a href="#"class="destination-list-link">
-                        <div class="destination-item UK">
+                        <div class="destination-item uk">
                             <div class="bottompart">
                                 <div>
                                     <p class="country">London, UK</p>
@@ -134,7 +141,7 @@
                         </div>
                     </a>
                     <a href="#"class="destination-list-link">
-                        <div class="destination-item Europe">
+                        <div class="destination-item europe">
                             <div class="bottompart">
                                 <div>
                                     <p class="country">Full Europe</p>
@@ -154,8 +161,8 @@
             <div class="wrapper">
                 <section class="book-section-sides">
                     <div class="left-side-book-section">
-                        <h3 class="type-of-section type-left">Easy and Fast</h3>
-                        <h1 class="section-header book-section-header header-left ">Book your next trip in 3 easy steps</h1>
+                        <h3 class="type-of-section type-left book-section__type-of-section">Easy and Fast</h3>
+                        <h1 class="section-header book-section__header header-left ">Book your next trip in 3 easy steps</h1>
                         <ul class="book-item-list">
                             <li class="bg-yellow mg">
                                 <div class="book-item">
@@ -240,35 +247,38 @@
                         <h3 class="type-of-section type-left">Testimonials</h3>
                         <h1 class="section-header header-left header-testimonials-section ">What people say about Us.</h1>
                         <div class="wrap">
-                            <input type="radio" id="rad1" name="rads" checked>
-                            <label for="rad1"></label>
-                            <input type="radio" id="rad2" name="rads" >
-                            <label for="rad2"></label>
-                            <input type="radio" id="rad3" name="rads">
-                            <label for="rad3"></label>
+                            <input type="radio" id="rad1" name="rads" checked  class="testimonials-section-input">
+                            <label for="rad1" class="testimonials-section-rad"></label>
+                            <input type="radio" id="rad2" name="rads" class="testimonials-section-input">
+                            <label for="rad2" class="testimonials-section-rad"></label>
+                            <input type="radio" id="rad3" name="rads" class="testimonials-section-input">
+                            <label for="rad3" class="testimonials-section-rad"></label>
                         </div>
                     </div>
                     <div class="right-side-testimonials-section">
+                        <div class="review-container">
+                            <div class="review">
+                                <img class="profile-img" src="./img/profile-icon.png" alt="profile-icon">
+                                <p class="text">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
+                                <p class="name">Mike taylor</p>
+                                <p class="location">Lahore, Pakistan</p>
+                            </div>
+                            <div class="review behind">
+                                <p class="text ">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
+                                <p class="name  ">Chris Thomas</p>
+                                <p class="location ">CEO of Red Button</p>
+                            </div>
+                            <div class="controls">
+                                <a href="#">
+                                    <div class="up-arrow"></div>
+                                </a>
+                                <a href="#">
+                                    <div class="down-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                       
                         
-                        <div class="review">
-                            <img class="profile-img" src="./img/profile-icon.png" alt="profile-icon">
-                            <p class="text">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                            <p class="name">Mike taylor</p>
-                            <p class="location">Lahore, Pakistan</p>
-                        </div>
-                        <div class="review behind">
-                            <p class="text ">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                            <p class="name  ">Chris Thomas</p>
-                            <p class="location ">CEO of Red Button</p>
-                        </div>
-                        <div class="controls">
-                            <a href="#">
-                                <div class="up-arrow"></div>
-                            </a>
-                            <a href="#">
-                                <div class="down-arrow"></div>
-                            </a>
-                        </div>
                         
                     </div>
                 </section>
@@ -287,8 +297,9 @@
         </section>
         <section class="subscribe-section">
             <div class="wrapper">
-                <img src="./img/decore-3-sub-section.png" alt="decore" class="decore">
+                
                 <div class="subscribe-container">
+                    <img src="./img/decore-3-sub-section.png" alt="decore" class="decore">
                     <img src="./img/plane-icon.png" alt="plane-icon" class="plane-icon">
                     <img src="./img/decor-subs-section.png" alt="decore" class="decore-1">
                     <img src="./img/decor-2-subs-section.png" alt="decore" class="decore-2">
@@ -364,3 +375,4 @@
     </main>
 </body>
 </html>
+
