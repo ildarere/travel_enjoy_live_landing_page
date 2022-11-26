@@ -9,41 +9,46 @@
 </head>
 <body>
     <header class="header">
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <div class="header-wrapper">
-            <div class="header-logo">
-                <a href="#" class="header-logo-link">
-                    <img src="./img/svg/logo.svg" alt="logo">
-                </a>
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <a href="#" class="header-logo-link">
+                        <img src="./img/svg/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="header-nav">
+                    
+                        <input type="checkbox" id="menubtn" class="menu-button ">
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                        <ul class="header-list">
+                            <li class="header-item">
+                                <a href="#" class="header-link">Desitnations</a></li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Hotels</a></li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Flights</a></li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Bookings</a></li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Login</a></li>
+                            <li class="header-item sign-up-li">
+                                <a href="#" class="header-link sign-up">Sign up</a></li>
+                            <li class="header-item language-select">
+                                <div class="lang">EN</div>
+                                <!-- <div class="lang">RU</div>     -->
+                                <div class="lang-arrow"></div>
+                            </li>
+                        </ul>
+                    
+
+                </nav>
             </div>
-            <nav class="header-nav">
-                <input type="checkbox" id="menubtn" class="menu-button ">
-                <label for="menubtn" class="menu-button-label header-nav__menu-button"></label>
-                <ul class="header-list">
-                    <li class="header-item">
-                        <a href="#" class="header-link">Desitnations</a></li>
-                    <li class="header-item">
-                        <a href="#" class="header-link">Hotels</a></li>
-                    <li class="header-item">
-                        <a href="#" class="header-link">Flights</a></li>
-                    <li class="header-item">
-                        <a href="#" class="header-link">Bookings</a></li>
-                    <li class="header-item">
-                        <a href="#" class="header-link">Login</a></li>
-                    <li class="header-item sign-up-li">
-                        <a href="#" class="header-link sign-up">Sign up</a></li>
-                    <li class="header-item language-select">
-                        <div class="lang">EN</div>
-                        <!-- <div class="lang">RU</div>     -->
-                        <div class="lang-arrow"></div>
-                    </li>
-                </ul>
-               
-
-            </nav>
         </div>
-    </div>
     </header>
 
     <main class="main">
@@ -166,19 +171,19 @@
                         <ul class="book-item-list">
                             <li class="bg-yellow mg">
                                 <div class="book-item">
-                                    <p class="header">Choose Destination</p>
+                                    <p class="header__book-item">Choose Destination</p>
                                     <p class="discryption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                                 </div>
                             </li>
                             <li class="bg-red mg">
                                 <div class="book-item">
-                                    <p class="header">Choose Destination</p>
+                                    <p class="header__book-item">Choose Destination</p>
                                     <p class="discryption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                                 </div>
                             </li>
                             <li class="bg-blue mg">
                                 <div class="book-item">
-                                    <p class="header">Choose Destination</p>
+                                    <p class="header__book-item">Choose Destination</p>
                                     <p class="discryption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                                 </div>
                             </li>
@@ -213,7 +218,7 @@
                                     </a>
                                 </div>
                                 <div class="bottom-container">
-                                    <div>
+                                    <div class="people-counter-container">
                                         <img src="./img/building-icon.png" alt="building-icon" class="building-icon">
                                         <p class="people-counter">24 people going</p>
                                     </div>
@@ -246,6 +251,14 @@
                     <div class="left-side-testimonials-section">
                         <h3 class="type-of-section type-left">Testimonials</h3>
                         <h1 class="section-header header-left header-testimonials-section ">What people say about Us.</h1>
+                        <div class="controls left-side-testimonials-section__controls">
+                            <a href="#">
+                                <div class="up-arrow"></div>
+                            </a>
+                            <a href="#">
+                                <div class="down-arrow"></div>
+                            </a>
+                        </div>
                         <div class="wrap">
                             <input type="radio" id="rad1" name="rads" checked  class="testimonials-section-input">
                             <label for="rad1" class="testimonials-section-rad"></label>

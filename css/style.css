@@ -451,12 +451,14 @@ body {
 /*  Header styles start  */
 
 .header {
-    
+ 
+    height: auto;
+    width: 100%;
+    z-index: 1000;
+  
 }
 .menu-button {
-    display: none;
-    
-    
+    display: none;  
 }
 .menu-button-label{
     position: relative;
@@ -469,16 +471,17 @@ body {
 .header-nav{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    position: relative;
 }
 .header-wrapper{
+ 
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-top: 48.7px;
+  
 }
 .header-list {
     display: flex;
@@ -486,6 +489,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     height: 100%;
+   
 }
 .header-item {
     
@@ -504,6 +508,10 @@ body {
 
 }
 .header-item a:visited {
+    color: black;
+    
+}
+.header-item a {
     color: black;
     
 }
@@ -923,7 +931,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-.book-item .header {
+.book-item .header__book-item {
     font-weight: 700;
     font-size: 16px;
     line-height: 124.5%;
@@ -944,7 +952,7 @@ body {
     flex: 1 1;
     position: relative;
     width: 50%;
-    height: 500px;
+    height: auto;
 }
 .book-trip-link {
     text-decoration: none;
@@ -1042,7 +1050,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 20px;
+    flex-wrap: wrap;
+}
+.people-counter-container {
+    flex: 1 1 100px;
+    min-width: 120px;
+    display: flex;
 }
 
 .bottom-container .building-icon {
@@ -1067,7 +1080,7 @@ body {
 .heart-icon-link:hover + .complete-section {
     display: flex;
     flex-direction: row;
-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .complete-section {
     position: absolute;
@@ -1155,6 +1168,9 @@ flex-wrap: wrap;
     flex-direction: column;
     
     flex-wrap: wrap;
+}
+.left-side-testimonials-section__controls {
+    display: none;
 }
 .header-testimonials-section {
     margin-bottom: 82px;
@@ -1340,7 +1356,7 @@ label {
 
 }
 .subscribe-container {
-    width: 100%;
+    width: 90%;
     min-height: 407px;
     height: auto;
     padding: 70px;
@@ -1351,7 +1367,9 @@ label {
     align-items: center;
     justify-content: center;
     position: relative;
+    margin: 0 auto;
     margin-bottom: 70px;
+   
 }
 .title-subscribe {
     max-width: 859px;
@@ -1571,45 +1589,127 @@ flex-wrap: wrap;
 
 @media screen and (max-width: 1024px) {
 /*  Header styles start  */
-.menu-button {
-    position: relative;
-}
-.menu-button-label {
-    position: relative;
-}
-.menu-button-label::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid #000000 !important;
-    border-right: 1px solid #000000 !important;
-    transform: rotate(135deg);
-    display: block;
-    cursor: pointer;
-    position: absolute;
+.header {
+    position: fixed;
+    background-color: white;
+    top: 0;
     
-    
-}
-.menu-button:checked + .menu-button-label::before{
-    transform: rotate(315deg);
-}
-.menu-button:checked ~ .header-list {
-    display: flex;
-}
-.header-list {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    display: none;
 }
 .header-wrapper {
-    flex-direction: column;
+    margin: 0;
 }
-.intro{
-    padding: 0;
+
+.header-nav {
+    display: block;
+    position: relative;
+    height: 64px;
+}
+.menu-button {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+}
+.header-nav .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-nav .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+}
+.header-nav .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.header-nav .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.header-nav .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+.header-list {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    width: 300px;
+    
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 20%;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 9px 0px 10px 0px #aaa;
+    align-items: flex-start;
+    
+}
+.header-link {
+    width: 100%;
+
+}
+.header-item {
+    height: 50px;
+    text-align: left;
+    display: flex;
+    width: 100%;
+ 
+}
+.sign-up-li {
+    margin: 0;
+    width: auto;
+    border: none;
+}
+.sign-up {
+    border: none;
+}
+.language-select {
+    justify-content: flex-start;
+}
+.header-logo {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.menu-button:checked ~ .header-list {
+    transform: translateX(0);
+}
+
+.menu-button:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+}
+
+.menu-button:checked~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.menu-button:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
 }
 /*  Header styles end  */
 
 /* Intro styles start */
+.intro {
+    margin-top: 50px;
+}
 .right-side-intro {
     display: none;   
 }
@@ -1641,10 +1741,22 @@ flex-wrap: wrap;
 .section-header {
     text-align: center;
 }
+
 /* Category section styles end*/
 /* Category Destinations styles start*/
 /* Category Destinations styles end*/
 /* Category book-section styles start*/
+
+.book-trip {
+    max-width: 500px;
+    min-width: 370px;
+    width: 100%;
+    height: auto;
+}
+.trip-img {
+    width: 100%;
+    height: auto;
+}
 .book-section-sides {
     justify-content: center;
 }
@@ -1657,6 +1769,9 @@ flex-wrap: wrap;
     transform: translateX(50%) translateY(-50%);
     right:50%;
     top: 50%;
+}
+.right-side-book-section {
+    margin-top: 40px;
 }
 /* Category book-section styles end*/
 /* Category testimonials-section styles start*/
@@ -1683,8 +1798,15 @@ flex-wrap: wrap;
 /* Category subscribe-section styles start*/
 .text-field__icon .text-field__input{
 
-    margin-left: 24px;
-    width: auto;
+    margin: 0;
+    width: 100%;
+}
+.text-field__input {
+    margin: 0 9px;
+    
+}
+.sub-button {
+    margin: 0 5px;
 }
 .text-field__icon::before {
     left: 15%;
@@ -1705,6 +1827,9 @@ flex-wrap: wrap;
 
 
 @media screen and (max-width: 768px) {
+.wrapper{
+    padding: 0 10px;
+}
 html {
     font-size: 10px;
 }
@@ -1714,29 +1839,84 @@ html {
 .decore-dest{
     display: none;
 }
+/*  Header styles start  */
+
+/*  Header styles end  */
+/* Intro styles start */
+.intro-section {
+    padding-bottom: calc(237px / 2);
+}
+/* Intro styles end */
+/* Category section styles start*/
+.category-section {
+    margin-bottom: calc(150px / 2);
+}
+
+/* Category section styles end*/
 
 /* Category Destinations styles start*/
+.destination-section {
+    margin-bottom: calc(186px / 2);
+}
 .destination-list {
     flex-direction: column;
 }
 .destination-item{
-    margin-bottom: 10px;
-    width: 315px;
+    margin-bottom: 15px;
+    width: 292px;
     height: 457px;
 }
 /* Category Destinations styles end*/
+/* Category book-section styles start*/
+.book-section {
+    margin-bottom: calc(200px / 2);
+}
+.people-counter-container {
+    min-width: 50%;
+}
+.bottom-container {
+    justify-content: center;
+}
+.complete-section {
+    display: flex;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    box-shadow: none;
+    justify-self: center;
+}
+.decorate-book-section {
+    display: none;
+}
+/* Category book-section styles end*/
 /* Category testimonials-section styles start*/
 
 .right-side-testimonials-section .profile-img {
     left: 50%;
     transform: translateX(-50%);
 }
-.right-side-testimonials-section .controls{
+.right-side-testimonials-section .controls, .left-side-testimonials-section__controls{
     transform: rotate(90deg);
     top: initial;
     right: initial;
     left: 50%;
-    bottom: -60%;
+
+}
+.right-side-testimonials-section .controls {
+    
+}
+.left-side-testimonials-section__controls {
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrap {
+    display: none;
+}
+.behind {
+    display: none;
 }
 /* Category testimonials-section styles end*/
 /* Category subscribe-section styles start*/
@@ -1746,27 +1926,88 @@ html {
 .text-field__icon .text-field__input{
     height: 60px;
     font-size: 1.5rem;
+    margin: 0;
+    
+   
 }
 .subscribe-container{
     border-radius:  100px 20px 20px 20px;
     padding: 30px;
 }
+.text-field__icon {
+    width: 50%;
+    margin: 0 10px;
+    margin-bottom: 10px;
+}
 .sub-button{
     height: 60px;
     padding: 0 50px;
+    margin: 0 10px;
+    width: 50%;
+   
 }
 /* Category subscribe-section styles end*/
-
+/* Category footer-section styles start*/
+.company-desc-colunm {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.logo-footer {
+    margin-right: 20px;
+}
+/* Category footer-section styles end*/
 
 }
 
 
 
 @media screen and (max-width: 425px) {
-    .wrapper{
-        padding: 0;
-    }
+  
     .behind{
         left: 0;
+    }
+
+    .book-trip {
+        width: 100%;
+        min-width: 200px;
+    }
+    .text-field__icon {
+        width: 80%;
+
+    }
+    .sub-button{
+        width: 80%;
+       
+    }
+/* Category footer-section styles start*/
+    .nav-column {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-column ul{
+        margin-bottom: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-column ul lh{
+        width: 100%;
+    }
+/* Category footer-section styles end*/
+}
+
+@media screen and (max-width: 320px) {
+    .text-field__icon {
+        width: 95%;
+
+    }
+    .sub-button{
+        width: 95%;
+       
     }
 }
