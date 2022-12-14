@@ -1396,6 +1396,7 @@ label {
     background: #FFFFFF;
     border-radius: 10px;
     width: 421px;
+    margin-right: 10px;
 }
 
 .text-field__icon::before {
@@ -1944,11 +1945,15 @@ html {
     border-radius:  100px 20px 20px 20px;
     padding: 30px;
 }
+.email-form {
+    width: 100%;
+}
 .text-field__icon {
     margin: 0 10px;
     margin-bottom: 10px;
-    width: 85%;
+    width:85% ;
 }
+
 .sub-button{
     height: 60px;
     padding: 0 50px;
